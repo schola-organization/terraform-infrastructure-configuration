@@ -1,0 +1,6 @@
+architecture: replicaset
+
+auth:
+  enabled: true
+  rootUser: "root"
+  rootPassword: "mongo"

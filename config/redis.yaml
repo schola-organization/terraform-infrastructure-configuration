@@ -1,0 +1,18 @@
+global:
+  redis:
+    password: "redis"
+
+redis:
+  image:
+    registry: "docker.io"
+    repository: "bitnami/redis"
+    tag: "6.2"
+    pullPolicy: IfNotPresent
+  architecture: replication
+  auth:
+    enabled: true
+    password: "redis"
+  master:
+    count: 1
+  replica:
+    replicaCount: 5
